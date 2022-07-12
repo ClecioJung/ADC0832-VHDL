@@ -20,7 +20,7 @@ This project consists of the communication of a CPLD with a analog-to-digital co
     - [Pulse Width Modulation (PWM)](./pwm.vhd);
     - [Transmitter for serial communication](./serial_tx.vhd);
     - [Shift register](./shift_register.vhd);
-- In this project, the CPLD receives the data received from the analog-to-digital converter [ADC0832](https://www.ti.com/product/ADC0832-N). This converter has two analog inputs, which are connected to two potentiometers that can be manually adjusted, changing the data received by the CPLD. The voltage level of the CPLD is 3V3 while the ADC0832 operates at 5V. This is not a problem for the AD0832 digital inputs (`clk_adc`, `cs_adc` and `di_adc` pins), as this chip identifies high logic level above 2V. On the other hand, to connect the digital output of the converter (pin `do_adc`) to the CPLD, a voltage divider circuit was used to adjust the signal amplitudes;
+- In this project, the CPLD receives the data amostrated from the analog-to-digital converter [ADC0832](https://www.ti.com/product/ADC0832-N). This converter has two analog inputs, which are connected to two potentiometers that can be manually adjusted, changing the data received by the CPLD. The voltage level of the CPLD is 3V3 while the ADC0832 operates at 5V. This is not a problem for the AD0832 digital inputs (`clk_adc`, `cs_adc` and `di_adc` pins), as this chip identifies high logic level above 2V. On the other hand, to connect the digital output of the converter (pin `do_adc`) to the CPLD, a voltage divider circuit was used to adjust the signal amplitudes;
 - The digital data received from the analog-to-digital converter is transmitted by the CPLD via a serial interface (by the tx pin). A computer can be connected via TTL/USB converter, and thus receive and analyze these signals (using [serialplot](https://github.com/hyOzd/serialplot), for example).
 - List of input and output pins of the CPLD:
 
@@ -44,4 +44,4 @@ This project consists of the communication of a CPLD with a analog-to-digital co
 
 ## Usage
 
-In order to use this project, just restore the archived project (`project-quartus.qar`) from the project menu in the Quartus Prime software. Or just use the VHDL files directly (It may be easier)
+In order to use this project, just restore the archived project (`project-quartus.qar`) from the project menu in the Quartus Prime software. Or just use the VHDL files directly (It may be easier).
